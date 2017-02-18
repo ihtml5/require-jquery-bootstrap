@@ -1,7 +1,6 @@
 # require-jquery-bootstrap
 
   require query bootstrap demo
-***
 ## 参考文章
 
 1. [bootstrap](http://getbootstrap.com)
