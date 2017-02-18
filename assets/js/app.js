@@ -8,10 +8,8 @@
 
 //Load common code that includes config, then load the app logic for this page.
 
-require(['plugins/domReady'], function (dom){
-	console.info('domReady');
-	console.dir(dom);
-	requirejs(['./common'], function (common) {
-		requirejs(['app/main']);
+requirejs(['plugins/domReady'], function (dom){
+	requirejs(['./config'], function (common) {
+		requirejs(['app/home']);
 	});
 });

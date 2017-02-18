@@ -1,7 +1,14 @@
-define(['jquery'],function($) {
+define(['jquery','require'],function($) {
 	return {
-		gw: function() {
+		getWidthFromWin: function() {
 			console.log($(window).width())
+		},
+		version: '1.0.0',
+		getVersion: function() {
+			console.log(this.version);
+		},
+		getCssUrl: function(url) {
+			return require.toUrl(url);
 		}
 	}
 })

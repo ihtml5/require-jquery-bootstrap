@@ -1,9 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script data-main="assets/js/app" src="assets/js/lib/require.js"></script>
+    	<link rel="stylesheet"  href="assets/css/bootstrap.css">
+      <link rel="stylesheet"  href="assets/css/bootstrap-multiselect.css">
+      <link rel="stylesheet"  href="assets/css/bootstrap-table.css">
+      <style>
+        h4 {
+          margin: 10px 0;
+          color: #999;
+        }
+        h4:nth-of-type(1) {
+          margin-top: 20px;
+        }
+      </style>
     </head>
     <body>
-        <h1>Hello World</h1>
+        <h1>Hello Require.js</h1>
+        <div>
+          <h4>使用bootstrap</h4>
+          <button type="button" class="btn btn-default" data-toggle="tooltip"
+          data-placement="top" title="Tooltip on top">
+          bootstrap demo
+        </button>
+      </div>
+      <div>
+        <h4>使用bootstrap table</h4>
+        <table id="ownTable"></table>
+      </div>
+      <div>
+        <h4>使用bootstrap multiselect</h4>
+        <select id="ownSelect" multiple="multiple">
+          <option value="Es6">Es6</option>
+          <option value="React">React</option>
+          <option value="Node">Node</option>
+      </select>
+    </div>
+      <script charset="utf-8" data-main="assets/js/app" src="assets/js/lib/require.js"></script>
     </body>
 </html>
