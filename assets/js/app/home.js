@@ -5,10 +5,12 @@ define(function(require) {
   var $btsTable = require('bootstrap.table');
   var $ownSelect = $('#ownSelect');
   var $ownTable = $('#ownTable');
+  var $tJquery = $('.t-jquery').eq(0);
+  $tJquery.after('<p class="t-jqueryCopy">copy: '+$tJquery.html()+'</p>');
   var $bts = require('bootstrap');
   var allShims = require('exshim');
   $ownSelect.hide().multiselect({
-    nonSelectedText: '请选择使用require'
+    nonSelectedText: '请选择使用require,gulp,webpack'
   });
   $ownTable.bootstrapTable({
     columns: [{
