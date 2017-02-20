@@ -1,5 +1,7 @@
 requirejs.config({
     baseUrl: 'assets/js/lib',
+    //为资源添加后缀，强制其从服务器上拉取资源
+    urlArgs: 'v='+new Date().getTime(),
     paths: {
         'app': '../app',
         'utils': '../utils',
@@ -36,7 +38,7 @@ requirejs.config({
       "bootstrap.table": {
         'deps':["jquery","bootstrap"]
       },
-      "bootstrap.": {
+      "bootstrap.multiselect": {
         'deps':["jquery","bootstrap"]
       }
     }

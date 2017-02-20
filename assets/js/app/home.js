@@ -7,7 +7,9 @@ define(function(require) {
   var $ownTable = $('#ownTable');
   var $bts = require('bootstrap');
   var allShims = require('exshim');
-  $ownSelect.hide().multiselect();
+  $ownSelect.hide().multiselect({
+    nonSelectedText: '请选择使用require'
+  });
   $ownTable.bootstrapTable({
     columns: [{
         field: 'id',
