@@ -8,7 +8,7 @@
 
 //Load common code that includes config, then load the app logic for this page.
 
-requirejs(['plugins/domReady'], function (dom){
+requirejs(['plugins/domReady','pollify/index'], function (dom,allshim){
 	requirejs(['./config'], function (common) {
 		requirejs(['app/home']);
 	});

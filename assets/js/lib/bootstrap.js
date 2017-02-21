@@ -1302,7 +1302,7 @@ if (typeof jQuery === 'undefined') {
     this.$viewport = this.options.viewport && $($.isFunction(this.options.viewport) ? this.options.viewport.call(this, this.$element) : (this.options.viewport.selector || this.options.viewport))
     this.inState   = { click: false, hover: false, focus: false }
 
-    if (this.$element[0] instanceof document.constructor && !this.options.selector) {
+    if (document.constructor && this.$element[0] instanceof document.constructor && !this.options.selector) {
       throw new Error('`selector` option must be specified when initializing ' + this.type + ' on the window.document object!')
     }
 

@@ -11,7 +11,10 @@ requirejs.config({
         'bootstrap.table': 'bootstrap.table',
         'bootstrap.multiselect': 'bootstrap.multiselect',
         'exshim': '../shim/index',
-        'jquery-private': '../shim/jquery-private'
+        'jquery-private': '../shim/jquery-private',
+        'oconsole': '../pollify/console',
+        'es5shim': '../pollify/es5-shim',
+        'pollify': '../pollify'
     },
     // map: {
     //   '*': { 'jquery': 'jquery-private'},
@@ -31,6 +34,12 @@ requirejs.config({
             jsonToStr: 'JsonToStr'
           }
         }
+      },
+      "oconsole": {
+        'exports': 'oconsole'
+      },
+      "es5shim": {
+        'exports': 'es5shim'
       },
       "bootstrap": {
           'deps': ["jquery"]

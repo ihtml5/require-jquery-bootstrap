@@ -10,20 +10,24 @@
             //List common dependencies here. Only need to list
             //top level dependencies, "include" will find
             //nested dependencies.
-            include: ['jquery',
+            include: [
+                      'jquery',
                       'bootstrap',
                       'bootstrap.table',
                       'bootstrap.multiselect'
             ]
         },
-
+        {
+            name: '../pollify/index',
+            exclude: ['../config']
+        },
         {
             //module names are relative to baseUrl
             name: 'app/list',
             //List common dependencies here. Only need to list
             //top level dependencies, "include" will find
             //nested dependencies.
-            exclude: ['../config']
+            include: ['../config']
         },
         {
             //module names are relative to baseUrl
@@ -31,7 +35,7 @@
             //List common dependencies here. Only need to list
             //top level dependencies, "include" will find
             //nested dependencies.
-            exclude: ['../config']
+            exclude: ['../config','pollify/index'],
         }
         //Now set up a build layer for each page, but exclude
         //the common one. "exclude" will exclude
